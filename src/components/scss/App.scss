@@ -1,0 +1,130 @@
+@import "variables";
+@import "mixins";
+
+.layout {
+  margin: 0 8%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 7%;
+}
+
+.logo__title {
+  color: gold;
+  font-style: italic;
+}
+
+.logo__image_animated {
+  @include animation(pokeball_rotate, 2s, linear, 0s, infinite, normal, none);
+}
+
+@keyframes pokeball_rotate  {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.content {
+  padding-top: 5%;
+}
+
+.select-searchbox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10% 5%;
+}
+
+.swal {
+  &-modal {
+    background-color: #484848;
+  }
+  &-title, &-text, &-button {
+    color: gold;
+  }
+  &-text {
+    opacity: 0.6;
+  }
+  &-button {
+    background-color: #585858;
+    &:hover {
+      background-color: #848484 !important;
+      color: gold;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:active {
+      background-color: #585858;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding-top: 10%;
+  color: gold;
+  &-icons {
+    padding: 1% 0%;
+  }
+  &__icon {
+    margin: 1%;
+  }
+  &__note {
+    opacity: 0.6;
+  }
+  @include footer__links_colors();
+  &__pokeapi-link {
+    color: gold;
+    &:hover {
+      color: #ffbf00;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .layout {
+    margin: 0 5%;
+  }
+  @include logo($logo__title_font-size-xxs, $logo__image_width-xxs);
+  @include select-searchbox_direction();
+  @include swal-text_font_size($swal-text_font_size-sm);
+  @include footer_font-size($footer__text_font-size, $footer__note_font-size, $footer__icon_font-size);
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  @include logo($logo__title_font-size-xs, $logo__image_width-xs);
+  @include select-searchbox_direction();
+  @include swal-text_font_size($swal-text_font_size-sm);
+  @include footer_font-size($footer__text_font-size, $footer__note_font-size, $footer__icon_font-size);
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  @include logo($logo__title_font-size-sm, $logo__image_width-sm);
+  @include select-searchbox_direction();
+  @include swal-text_font_size($swal-text_font_size-sm);
+  @include footer_font-size($footer__text_font-size, $footer__note_font-size, $footer__icon_font-size);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  @include logo($logo__title_font-size-md, $logo__image_width-md);
+  @include swal-text_font_size($swal-text_font_size-md);
+  @include footer_font-size($footer__text_font-size-md, $footer__note_font-size-md, $footer__icon_font-size-md);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  @include logo($logo__title_font-size-lg, $logo__image_width-lg);
+  @include swal-text_font_size($swal-text_font_size-lg);
+  @include footer_font-size($footer__text_font-size-lg, $footer__note_font-size-lg, $footer__icon_font-size-lg);
+}
+
+@media screen and (min-width: 1440px) {
+  @include logo($logo__title_font-size-xl, $logo__image_width-xl);
+  @include swal-text_font_size($swal-text_font_size-xl);
+  @include footer_font-size($footer__text_font-size-xl, $footer__note_font-size-xl, $footer__icon_font-size-xl);
+}

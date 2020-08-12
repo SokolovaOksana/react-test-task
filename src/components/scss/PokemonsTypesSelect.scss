@@ -1,0 +1,52 @@
+@import "variables";
+@import "mixins";
+
+.select__component, .ant-select-dropdown {
+  background-color: #424242;
+  border-radius: 5px;
+  color: gold;
+}
+
+.select__option {
+  background-color: #424242;
+  color: gold;
+  &:hover {
+    background-color: #585858;
+  }
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #585858;
+  color: gold;
+}
+
+.ant-select-selector {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 374px) {
+  @include select($select__component_width-xxs, $select__component_font-size-xs);
+  @include select_centered();
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  @include select($select__component_width-xs, $select__component_font-size-xs);
+  @include select_centered();
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  @include select($select__component_width-sm, $select__component_font-size-sm);
+  @include select_centered();
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  @include select($select__component_width-md, $select__component_font-size-md);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  @include select($select__component_width-lg, $select__component_font-size-lg);
+}
+
+@media screen and (min-width: 1440px) {
+  @include select($select__component_width-xl, $select__component_font-size-xl);
+}

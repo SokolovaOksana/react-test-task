@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixins";
+
+.pagination {
+  text-align: center;
+}
+
+.ant-pagination {
+  &-total-text {
+    display: block;
+    color: gold;
+    margin: 0 auto;
+  }
+
+  &-item {
+    background-color: #424242;
+    border: none;
+    text-align: center;
+    &-link {
+      background-color: #424242 !important;
+      border: none !important;
+      color: gold !important;
+      opacity: 0.4 !important;
+      &:hover {
+        opacity: 1 !important;
+      }
+      &-icon {
+        color: gold !important;
+      }
+    }
+    &-active a {
+      color: gold !important;
+      opacity: 1 !important;
+    }
+    & a {
+      color: gold;
+      opacity: 0.4;
+      &:hover {
+        color: gold;
+        opacity: 1;
+      }
+    }
+    &-ellipsis {
+      color: gold !important;
+      opacity: 0.4 !important;
+    }
+  }
+
+  &-options {
+    margin-top: 2%;
+    display: block;
+
+    &-quick-jumper {
+      color: gold;
+
+      & input {
+        background-color: #424242;
+        color: gold;
+        border: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.ant-select-selector {
+  background-color: #424242 !important;
+  border: none !important;
+  color: gold;
+}
+
+@media screen and (max-width: 374px) {
+  @include pagination_font_size($pagination_font-size-xs);
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  @include pagination_font_size($pagination_font-size-xs);
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  @include pagination_font_size($pagination_font-size-sm);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  @include pagination_font_size($pagination_font-size-md);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  @include pagination_font_size($pagination_font-size-lg);
+}
+
+@media screen and (min-width: 1440px) {
+  @include pagination_font_size($pagination_font-size-xl);
+}

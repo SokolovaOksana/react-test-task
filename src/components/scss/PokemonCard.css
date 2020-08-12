@@ -1,0 +1,182 @@
+.card {
+  margin: 2%;
+  border-radius: 12px;
+  border: 3px solid #424242;
+  background-color: #6e6e6e;
+  color: gold;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.card:hover {
+  animation-direction: alternate;
+  box-shadow: 5px 5px #2e2e2e;
+  z-index: 999;
+  transform: scale(1.05) translateX(-5px);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+.ant-card-head {
+  border-bottom: 3px solid #424242;
+}
+.ant-card-head-title {
+  font-style: italic;
+  color: gold;
+  text-align: center;
+}
+
+.ant-card-body {
+  text-align: center;
+}
+
+.card__title {
+  display: block;
+  text-align: center;
+  margin: 5% 0;
+}
+
+.card-div {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 12px;
+  border: 5px solid #424242;
+  padding: 5%;
+}
+
+.card__image {
+  width: 220px;
+}
+
+.card__type, .ant-tag {
+  margin: 0;
+}
+
+.card__abilities {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+}
+
+.card-height-weight, .card-total-average {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+
+.card__height, .card__weight, .card__total, .card__average {
+  text-align: center;
+}
+
+@media screen and (max-width: 374px) {
+  .ant-card-head-title {
+    font-size: 16px;
+  }
+
+  .card__title {
+    font-size: 14px;
+  }
+
+  .card__abilities {
+    font-size: 12px;
+  }
+
+  .ant-tag {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .ant-card-head-title {
+    font-size: 16px;
+  }
+
+  .card__title {
+    font-size: 14px;
+  }
+
+  .card__abilities {
+    font-size: 12px;
+  }
+
+  .ant-tag {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .ant-card-head-title {
+    font-size: 16px;
+  }
+
+  .card__title {
+    font-size: 15px;
+  }
+
+  .card__abilities {
+    font-size: 13px;
+  }
+
+  .ant-tag {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .ant-card-head-title {
+    font-size: 16px;
+  }
+
+  .card__title {
+    font-size: 16px;
+  }
+
+  .card__abilities {
+    font-size: 14px;
+  }
+
+  .ant-tag {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .ant-card-head-title {
+    font-size: 19px;
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__abilities {
+    font-size: 17px;
+  }
+
+  .ant-tag {
+    font-size: 14px;
+  }
+
+  .card__image {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .ant-card-head-title {
+    font-size: 21px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__abilities {
+    font-size: 19px;
+  }
+
+  .ant-tag {
+    font-size: 15px;
+  }
+
+  .card__image {
+    width: 250px;
+  }
+}
+
+/*# sourceMappingURL=PokemonCard.css.map */

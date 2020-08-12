@@ -1,0 +1,172 @@
+.pagination {
+  text-align: center;
+}
+
+.ant-pagination-total-text {
+  display: block;
+  color: gold;
+  margin: 0 auto;
+}
+.ant-pagination-item {
+  background-color: #424242;
+  border: none;
+  text-align: center;
+}
+.ant-pagination-item-link {
+  background-color: #424242 !important;
+  border: none !important;
+  color: gold !important;
+  opacity: 0.4 !important;
+}
+.ant-pagination-item-link:hover {
+  opacity: 1 !important;
+}
+.ant-pagination-item-link-icon {
+  color: gold !important;
+}
+.ant-pagination-item-active a {
+  color: gold !important;
+  opacity: 1 !important;
+}
+.ant-pagination-item a {
+  color: gold;
+  opacity: 0.4;
+}
+.ant-pagination-item a:hover {
+  color: gold;
+  opacity: 1;
+}
+.ant-pagination-item-ellipsis {
+  color: gold !important;
+  opacity: 0.4 !important;
+}
+.ant-pagination-options {
+  margin-top: 2%;
+  display: block;
+}
+.ant-pagination-options-quick-jumper {
+  color: gold;
+}
+.ant-pagination-options-quick-jumper input {
+  background-color: #424242;
+  color: gold;
+  border: none;
+  text-align: center;
+}
+
+.ant-select-selector {
+  background-color: #424242 !important;
+  border: none !important;
+  color: gold;
+}
+
+@media screen and (max-width: 374px) {
+  .ant-pagination-options-quick-jumper {
+    font-size: 11px;
+  }
+  .ant-pagination-options-quick-jumper input {
+    font-size: 11px;
+  }
+  .ant-pagination-total-text {
+    font-size: 11px;
+  }
+  .ant-pagination-item {
+    font-size: 11px;
+  }
+
+  .ant-select-selector, .ant-select-item-option-content {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .ant-pagination-options-quick-jumper {
+    font-size: 11px;
+  }
+  .ant-pagination-options-quick-jumper input {
+    font-size: 11px;
+  }
+  .ant-pagination-total-text {
+    font-size: 11px;
+  }
+  .ant-pagination-item {
+    font-size: 11px;
+  }
+
+  .ant-select-selector, .ant-select-item-option-content {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .ant-pagination-options-quick-jumper {
+    font-size: 12px;
+  }
+  .ant-pagination-options-quick-jumper input {
+    font-size: 12px;
+  }
+  .ant-pagination-total-text {
+    font-size: 12px;
+  }
+  .ant-pagination-item {
+    font-size: 12px;
+  }
+
+  .ant-select-selector, .ant-select-item-option-content {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .ant-pagination-options-quick-jumper {
+    font-size: 13px;
+  }
+  .ant-pagination-options-quick-jumper input {
+    font-size: 13px;
+  }
+  .ant-pagination-total-text {
+    font-size: 13px;
+  }
+  .ant-pagination-item {
+    font-size: 13px;
+  }
+
+  .ant-select-selector, .ant-select-item-option-content {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .ant-pagination-options-quick-jumper {
+    font-size: 16px;
+  }
+  .ant-pagination-options-quick-jumper input {
+    font-size: 16px;
+  }
+  .ant-pagination-total-text {
+    font-size: 16px;
+  }
+  .ant-pagination-item {
+    font-size: 16px;
+  }
+
+  .ant-select-selector, .ant-select-item-option-content {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .ant-pagination-options-quick-jumper {
+    font-size: 18px;
+  }
+  .ant-pagination-options-quick-jumper input {
+    font-size: 18px;
+  }
+  .ant-pagination-total-text {
+    font-size: 18px;
+  }
+  .ant-pagination-item {
+    font-size: 18px;
+  }
+
+  .ant-select-selector, .ant-select-item-option-content {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=PokemonsPagination.css.map */

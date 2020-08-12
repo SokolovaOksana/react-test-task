@@ -1,0 +1,280 @@
+.layout {
+  margin: 0 8%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 7%;
+}
+
+.logo__title {
+  color: gold;
+  font-style: italic;
+}
+
+.logo__image_animated {
+  animation: pokeball_rotate 2s linear 0s infinite normal none;
+  -webkit-animation: pokeball_rotate 2s linear 0s infinite normal none;
+}
+
+@keyframes pokeball_rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.content {
+  padding-top: 5%;
+}
+
+.select-searchbox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10% 5%;
+}
+
+.swal-modal {
+  background-color: #484848;
+}
+.swal-title, .swal-text, .swal-button {
+  color: gold;
+}
+.swal-text {
+  opacity: 0.6;
+}
+.swal-button {
+  background-color: #585858;
+}
+.swal-button:hover {
+  background-color: #848484 !important;
+  color: gold;
+}
+.swal-button:focus {
+  box-shadow: none;
+}
+.swal-button:active {
+  background-color: #585858;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 10%;
+  color: gold;
+}
+.footer-icons {
+  padding: 1% 0%;
+}
+.footer__icon {
+  margin: 1%;
+}
+.footer__note {
+  opacity: 0.6;
+}
+.footer__facebook-link {
+  color: #405a94;
+}
+.footer__facebook-link:hover {
+  color: #1a3673;
+}
+.footer__youtube-link {
+  color: #eb3223;
+}
+.footer__youtube-link:hover {
+  color: #bc261a;
+}
+.footer__twitter-link {
+  color: #2774eb;
+}
+.footer__twitter-link:hover {
+  color: #175ea8;
+}
+.footer__instagram-link {
+  color: #c23f8b;
+}
+.footer__instagram-link:hover {
+  color: #a41eb9;
+}
+.footer__tumblr-link {
+  color: #3f5973;
+}
+.footer__tumblr-link:hover {
+  color: #214262;
+}
+.footer__pokeapi-link {
+  color: gold;
+}
+.footer__pokeapi-link:hover {
+  color: #ffbf00;
+}
+
+@media screen and (max-width: 374px) {
+  .layout {
+    margin: 0 5%;
+  }
+
+  .logo__title {
+    font-size: 20px;
+  }
+
+  .logo__image {
+    width: 45px;
+  }
+
+  .select-searchbox {
+    flex-direction: column;
+  }
+
+  .swal-text {
+    font-size: 14px;
+  }
+
+  .footer__text {
+    font-size: 12px;
+  }
+
+  .footer__note {
+    font-size: 10px;
+  }
+
+  .footer__icon {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .logo__title {
+    font-size: 25px;
+  }
+
+  .logo__image {
+    width: 55px;
+  }
+
+  .select-searchbox {
+    flex-direction: column;
+  }
+
+  .swal-text {
+    font-size: 14px;
+  }
+
+  .footer__text {
+    font-size: 12px;
+  }
+
+  .footer__note {
+    font-size: 10px;
+  }
+
+  .footer__icon {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .logo__title {
+    font-size: 30px;
+  }
+
+  .logo__image {
+    width: 65px;
+  }
+
+  .select-searchbox {
+    flex-direction: column;
+  }
+
+  .swal-text {
+    font-size: 14px;
+  }
+
+  .footer__text {
+    font-size: 12px;
+  }
+
+  .footer__note {
+    font-size: 10px;
+  }
+
+  .footer__icon {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo__title {
+    font-size: 35px;
+  }
+
+  .logo__image {
+    width: 75px;
+  }
+
+  .swal-text {
+    font-size: 17px;
+  }
+
+  .footer__text {
+    font-size: 13px;
+  }
+
+  .footer__note {
+    font-size: 11px;
+  }
+
+  .footer__icon {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .logo__title {
+    font-size: 40px;
+  }
+
+  .logo__image {
+    width: 85px;
+  }
+
+  .swal-text {
+    font-size: 19px;
+  }
+
+  .footer__text {
+    font-size: 14px;
+  }
+
+  .footer__note {
+    font-size: 12px;
+  }
+
+  .footer__icon {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .logo__title {
+    font-size: 45px;
+  }
+
+  .logo__image {
+    width: 105px;
+  }
+
+  .swal-text {
+    font-size: 21px;
+  }
+
+  .footer__text {
+    font-size: 16px;
+  }
+
+  .footer__note {
+    font-size: 14px;
+  }
+
+  .footer__icon {
+    font-size: 55px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

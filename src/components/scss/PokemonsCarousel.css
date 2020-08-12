@@ -1,0 +1,41 @@
+.carousel {
+  background-color: #2e2e2e;
+  border-radius: 12px;
+  border: none;
+  margin: 0 auto;
+}
+
+.carousel__image {
+  display: block !important;
+  width: 50% !important;
+  margin: 0 auto;
+  padding: 2% 0;
+}
+
+@media screen and (max-width: 424px) {
+  .carousel {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .carousel {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .carousel {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .carousel {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=PokemonsCarousel.css.map */

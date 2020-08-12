@@ -1,0 +1,59 @@
+@import "variables";
+@import "mixins";
+
+.searchbox__search {
+  background-color: #424242;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.ant-input {
+  background-color: #424242;
+  color: gold;
+  &::placeholder {
+    color: gold;
+    opacity: 0.4;
+  }
+}
+
+.ant-input-search-icon:before {
+  display: none;
+}
+
+.ant-input-affix-wrapper {
+  background: none;
+}
+
+.ant-select-item-option {
+  color: gold;
+  &:hover {
+    background-color: #585858;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  @include search($searchbox__search_width-xxs, $searchbox__search_font-size-xs);
+  @include search_centered();
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  @include search($searchbox__search_width-xs, $searchbox__search_font-size-xs);
+  @include search_centered();
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  @include search($searchbox__search_width-sm, $searchbox__search_font-size-sm);
+  @include search_centered();
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  @include search($searchbox__search_width-md, $searchbox__search_font-size-md);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  @include search($searchbox__search_width-lg, $searchbox__search_font-size-lg);
+}
+
+@media screen and (min-width: 1440px) {
+  @include search($searchbox__search_width-xl, $searchbox__search_font-size-xl);
+}

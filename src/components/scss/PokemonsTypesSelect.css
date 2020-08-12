@@ -1,0 +1,73 @@
+.select__component, .ant-select-dropdown {
+  background-color: #424242;
+  border-radius: 5px;
+  color: gold;
+}
+
+.select__option {
+  background-color: #424242;
+  color: gold;
+}
+.select__option:hover {
+  background-color: #585858;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #585858;
+  color: gold;
+}
+
+.ant-select-selector {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 374px) {
+  .select__component {
+    width: 230px;
+    font-size: 11px;
+  }
+
+  .select {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .select__component {
+    width: 240px;
+    font-size: 11px;
+  }
+
+  .select {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .select__component {
+    width: 250px;
+    font-size: 12px;
+  }
+
+  .select {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .select__component {
+    width: 260px;
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .select__component {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .select__component {
+    width: 330px;
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=PokemonsTypesSelect.css.map */

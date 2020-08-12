@@ -1,0 +1,91 @@
+@import "variables";
+@import "mixins";
+
+.card {
+  margin: 2%;
+  border-radius: 12px;
+  border: 3px solid #424242;
+  background-color: #6e6e6e;
+  color: gold;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  @include card_transition();
+}
+
+.ant-card-head {
+  border-bottom: 3px solid #424242;
+  &-title {
+    font-style: italic;
+    color: gold;
+    text-align: center;
+  }
+}
+
+.ant-card-body {
+  text-align: center;
+}
+
+.card__title {
+  display: block;
+  text-align: center;
+  margin: 5% 0;
+}
+
+.card-div {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 12px;
+  border: 5px solid #424242;
+  padding: 5%;
+}
+
+.card__image {
+  width: 220px;
+}
+
+.card__type, .ant-tag {
+  margin: 0;
+}
+
+.card__abilities {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+}
+
+.card-height-weight, .card-total-average {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+
+.card__height, .card__weight, .card__total, .card__average {
+  text-align: center;
+}
+
+@media screen and (max-width: 374px) {
+  @include card_font_size($card_headtitle_font-size, $card_title_font-size-xs, $card_abilities_font-size-xs, $card_tag_font-size);
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  @include card_font_size($card_headtitle_font-size, $card_title_font-size-xs, $card_abilities_font-size-xs, $card_tag_font-size);
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  @include card_font_size($card_headtitle_font-size, $card_title_font-size-sm, $card_abilities_font-size-sm, $card_tag_font-size);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  @include card_font_size($card_headtitle_font-size, $card_title_font-size-md, $card_abilities_font-size-md, $card_tag_font-size);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  @include card_font_size($card_headtitle_font-size-lg, $card_title_font-size-lg, $card_abilities_font-size-lg, $card_tag_font-size-lg);
+  @include card__image_width($card__image_width-lg-xl);
+}
+
+@media screen and (min-width: 1440px) {
+  @include card_font_size($card_headtitle_font-size-xl, $card_title_font-size-xl, $card_abilities_font-size-xl, $card_tag_font-size-xl);
+  @include card__image_width($card__image_width-lg-xl);
+}
