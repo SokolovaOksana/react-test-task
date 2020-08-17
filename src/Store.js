@@ -1,9 +1,10 @@
 import swal from 'sweetalert';
 import { observable, action, decorate, toJS } from 'mobx';
+import { createContext } from 'react';
 
 class Store {
   constructor() {
-    this.pokemonsCount = 0;
+    this.pokemonsCount = 964;
     this.pokemons = [];
     this.types = [];
     this.page = 1;
@@ -19,13 +20,13 @@ class Store {
     this.getPokemons(this.pageSize, this.page * this.pageSize - this.pageSize);
   };
 
-  async getTypes() {
+  getTypes = async () => {
     const responce = await fetch('https://pokeapi.co/api/v2/type');
     const data = await responce.json();
     this.types = data.results.slice(0, data.results.length - 2);
   };
 
-  async getNames() {
+  getNames = async () => {
     const responce = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=964');
     const data = await responce.json();
     let names = [];
@@ -35,7 +36,7 @@ class Store {
     this.names = names;
   };
 
-  setPokemon(data) {
+  setPokemon = (data) => {
     let pokemon = {};
     pokemon.id = data.id;
     pokemon.name = data.name;
@@ -62,12 +63,12 @@ class Store {
     return pokemon;
   };
 
-  async getPokemons(limit, offset) {
+  getPokemons = async (limit, offset) => {
     this.indicator = 'getPokemons';
     this.loading = true;
     const responce = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
     const data = await responce.json();
-    this.pokemonsCount = data.count;
+    this.pokemonsCount = 964;
     let pokemons = [];
     for (const item of data.results) {
       const responceForEach = await fetch(`${item.url}`);
@@ -78,8 +79,9 @@ class Store {
     this.pokemons = pokemons;
   };
 
-  async getPokemonByName(name) {
-    this.handleChangePage(1, this.pageSize);
+  getPokemonByName = async (name) => {
+    name = name.toLowerCase();
+    this.page = 1;
     if (name === '') {
       return this.getPokemons(this.pageSize, this.page * this.pageSize - this.pageSize);
     }
@@ -96,9 +98,9 @@ class Store {
     }
   };
 
-  async getPokemonsByTypes(types) {
+  getPokemonsByTypes = async (types) => {
     this.indicator = 'getPokemonsByTypes';
-    this.handleChangePage(1, this.pageSize);
+    this.page = 1;
     if (types.length === 0) {
       return this.getPokemons(this.pageSize, this.page * this.pageSize - this.pageSize);
     }
@@ -122,13 +124,21 @@ class Store {
     this.pokemonsCount = this.storedData.length;
   };
 
-  getSlicedPokemonsByTypes(page, pageSize) {
+  getSlicedPokemonsByTypes = (page, pageSize) => {
     this.pokemons = this.storedData.slice(page * pageSize - pageSize, page * pageSize);
   };
 
-  handleChangePage(page, pageSize) {
+  paginationHandleChange = (page, pageSize) => {
     this.page = page;
     this.pageSize = pageSize;
+    switch (this.indicator) {
+      case 'getPokemons':
+        this.getPokemons(pageSize, page * pageSize - pageSize);
+        break;
+      case 'getPokemonsByTypes':
+        this.getSlicedPokemonsByTypes(page, pageSize);
+        break;
+    };
   };
 };
 
@@ -140,12 +150,12 @@ decorate(Store, {
   loading: observable,
   indicator: observable,
   storedData: observable,
-  getPokemons: action.bound,
-  getPokemonByName: action.bound,
-  getPokemonsByTypes: action.bound,
-  handleChangePage: action.bound,
-  getSlicedPokemonsByTypes: action.bound
+  getPokemons: action,
+  getPokemonByName: action,
+  getPokemonsByTypes: action,
+  getSlicedPokemonsByTypes: action,
+  paginationHandleChange: action
 });
 
 const store = new Store();
-export default store;
+export const storeContext = createContext(store);
