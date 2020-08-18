@@ -19,7 +19,7 @@ const App = observer((props) => {
       <div className="header">
         <div className="logo">
           <span className="logo__title">Poke&#769;dex
-            <img className="logo__image logo__image_animated" align="middle" src="./logo.png" alt="logo image" />
+            <img className="logo__image logo__image_animated" align="middle" src="./react-test-task/logo.png" alt="logo image" />
           </span>
         </div>
       </div>

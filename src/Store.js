@@ -40,7 +40,7 @@ class Store {
     let pokemon = {};
     pokemon.id = data.id;
     pokemon.name = data.name;
-    pokemon.avatarUrl = `./pokemonAvatars/${data.name}.png`;
+    pokemon.avatarUrl = `./react-test-task/pokemonAvatars/${data.name}.png`;
     pokemon.height = data.height;
     pokemon.weight = data.weight;
     pokemon.types = [];
